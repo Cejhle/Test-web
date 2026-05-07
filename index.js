@@ -86,17 +86,8 @@ app.get("/", (req, res) => {
 	res.sendFile(file)
 })
 
-const storage = multer.diskStorage({
-    destination: 'uploads/',
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + path.extname(file.originalname));
-    }
-});
-const upload = multer({ storage: storage });
-app.post('/upload', upload.single('foto'), (req, res) => {
-    res.send('File berhasil disimpan di folder uploads!');
-});
 
 app.listen(port, () => {
   console.log("aplikasi aktif di port ", port)
+
 })
