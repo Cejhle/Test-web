@@ -4,7 +4,7 @@ const port = 7777
 
 app.use(express.static('public'));
 
-app.get("/", (req, res) => {
+app.get("/test", (req, res) => {
   res.send(`
     <body style="
       background-image: url('/hutao.jpg'); 
@@ -78,8 +78,14 @@ app.get("/", (req, res) => {
   `);
 });
 
-import multer from 'multer';
-import path from 'path';
+const multer = await import('multer');
+const path = await import ('path');
+
+app.get("/", (req, res) => {
+	const file = path.join(process.cwd(), "index.html")
+	res.sendFile(file)
+})
+
 const storage = multer.diskStorage({
     destination: 'uploads/',
     filename: function (req, file, cb) {
