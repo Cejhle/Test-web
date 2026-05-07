@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
       <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px;">
         <p style="font-size: 20px;">Gua main Game Gacha banyak banget dan bakalan nambah<br> ini lah daftar Game Gacha yang gua mainin:</p>
         
-        <p>Genshin Impact<br> Akun Genshin gua ada 2 jadi jangan bingung kalau Gambarnya ada 2</p>
+              <p style="font-size: 20px;"><b>1. Genshin Impact</b><br> Akun Genshin gua ada 2 jadi jangan bingung kalau Gambarnya ada 2</p>
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="text-align: center;">
                 <img src="/genshin.jpg" style="width: 150px; height: 200px; border-radius: 10px; object-fit: cover; border: 2px solid white;">
@@ -38,25 +38,31 @@ app.get("/", (req, res) => {
                 
                 </div>
 
-<p>Honkai Starrail</p>
-<div style="text-align: center;">
+           <p style="font-size: 20px;"><b>2. Honkai Starrail</b></p>
+           <div style="text-align: center;">
                 <img src="/hsr.jpg" style="width: 150px; height: 200px; border-radius: 10px; object-fit: cover; border: 2px solid white;">
                 
             </div>
             
-            <p>Zenless Zone Zero</p>
+           <p style="font-size: 20px;"><b>3. Zenless Zone Zero</b></p>
             <div style="text-align: center;">
                 <img src="/zzz.jpg" style="width: 150px; height: 200px; border-radius: 10px; object-fit: cover; border: 2px solid white;">
                 
             </div>
             
-            <p>Wuthering Waves</p>
+            <p style="font-size: 20px;"><b>4. Wuthering Waves</b></p>
             <div style="text-align: center;">
                 <img src="/wuwa.jpg" style="width: 150px; height: 200px; border-radius: 10px; object-fit: cover; border: 2px solid white;">
                 
             </div>
             
-            <p>Neverness to Everness</p>
+           <p style="font-size: 20px;"><b>5. Arknight Endfield</b></p>
+            <div style="text-align: center;">
+                <img src="/endf.jpg" style="width: 150px; height: 200px; border-radius: 10px; object-fit: cover; border: 2px solid white;">
+                
+                </div>
+                
+            <p style="font-size: 20px;"><b>6. Neverness to Everness</b></p>
             <div style="text-align: center;">
                 <img src="/nte.jpg" style="width: 150px; height: 200px; border-radius: 10px; object-fit: cover; border: 2px solid white;">
                 
