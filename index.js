@@ -82,7 +82,7 @@ const multer = await import('multer');
 const path = await import ('path');
 
 app.get("/", (req, res) => {
-	const file = path.join(process.cwd(), "index.html")
+	const file = path.join(process.cwd(), "public", "index.html")
 	res.sendFile(file)
 })
 
