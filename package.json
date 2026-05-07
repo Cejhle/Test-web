@@ -1,0 +1,15 @@
+{
+  "name": "hutao",
+  "version": "1.0.0",
+  "description": "ini My Istri Gue",
+  "license": "MIT",
+  "author": "CejhleNihMah.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  }
+}
