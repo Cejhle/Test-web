@@ -17,7 +17,7 @@
         }
 
         h1 {
-            color: #ff4646; /* Merah khas Hu Tao */
+            color: #ff4646;
             font-size: 28px;
             text-align: center;
         }
@@ -29,7 +29,7 @@
         }
 
         .card {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             padding: 20px;
             border-radius: 15px;
             max-width: 800px;
@@ -37,7 +37,23 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Container buat scroll horizontal */
+        /* CSS KHUSUS PROFIL FULL 1604x720 */
+        .profile-container {
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        .profile-full {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1604 / 720;
+            object-fit: cover; /* Biar tetap tajam dan penuhi area */
+            border-radius: 12px;
+            border: 2px solid #ff4646;
+            display: block;
+        }
+
+        /* CONTAINER SCROLL HORIZONTAL */
         .game-list {
             display: flex;
             gap: 15px;
@@ -47,14 +63,18 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        /* Sembunyikan scrollbar tapi tetep bisa di-scroll */
         .game-list::-webkit-scrollbar {
-            display: none;
+            height: 6px;
+        }
+        
+        .game-list::-webkit-scrollbar-thumb {
+            background: #ff4646;
+            border-radius: 10px;
         }
 
         .game-item {
             flex: 0 0 auto;
-            width: 160px; /* Lebar tiap item game */
+            width: 160px;
             text-align: center;
             scroll-snap-align: start;
         }
@@ -62,7 +82,7 @@
         .game-item p {
             font-size: 14px;
             margin-bottom: 8px;
-            height: 40px; /* Biar tinggi teks seragam */
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -77,30 +97,10 @@
             transition: transform 0.3s ease;
         }
 
-        /* Efek pas gambar disentuh/hover */
-        .game-item img:active, .game-item img:hover {
+        .game-item img:hover {
             transform: scale(1.05);
             border-color: #ff4646;
         }
-        
-        /* CSS khusus untuk gambar profil full */
-.profile-container {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.profile-full {
-    width: 100%;           /* Lebar penuhi kotak card */
-    max-width: 100%;       /* Pastikan gak melebihi container */
-    height: auto;          /* Tinggi otomatis biar gak gepeng */
-    aspect-ratio: 1604 / 720; /* Mengunci rasio sesuai resolusi lu */
-    object-fit: contain;   /* Menampilkan seluruh gambar tanpa kepotong */
-    border-radius: 10px;
-    border: 2px solid #ff4646;
-    display: block;
-}
-
 
         .quote {
             margin-top: 30px;
@@ -113,6 +113,7 @@
         }
 
         b { color: #ff4646; }
+        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 25px 0; }
     </style>
 </head>
 <body>
@@ -123,68 +124,59 @@
         Perkenalkan aku <b>Cejhle</b>, pendamping setia <b>Hu Tao</b>.
     </p>
 
-<div class="card">
-    <p style="text-align: center;"><b>Daftar Game Gacha:</b><br>(Geser ke samping)</p>
-    <div class="game-list">
-        <div class="game-item">
-            <p><b>Genshin (Acc 1)</b></p>
-            <img src="/genshin.jpg" alt="Genshin 1">
+    <div class="card">
+        <p style="text-align: center;"><b>Profil Akun Gua:</b></p>
+        <div class="profile-container">
+            <img src="/profil_full.jpg" class="profile-full" alt="Profil">
         </div>
-        <div class="game-item">
-            <p><b>Genshin (Acc 2)</b></p>
-            <img src="/genshin2.jpg" alt="Genshin 2">
+
+        <hr>
+
+        <p style="text-align: center;"><b>Game Gacha Gua (Geser):</b></p>
+        <div class="game-list">
+            <div class="game-item">
+                <p>Genshin 1</p>
+                <img src="/genshin.jpg" alt="Genshin 1">
+            </div>
+            <div class="game-item">
+                <p>Genshin 2</p>
+                <img src="/genshin2.jpg" alt="Genshin 2">
+            </div>
+            <div class="game-item">
+                <p>Honkai Starrail</p>
+                <img src="/hsr.jpg" alt="HSR">
+            </div>
+            <div class="game-item">
+                <p>ZZZ</p>
+                <img src="/zzz.jpg" alt="ZZZ">
+            </div>
+            <div class="game-item">
+                <p>Wuwa</p>
+                <img src="/wuwa.jpg" alt="Wuwa">
+            </div>
         </div>
-        <div class="game-item">
-            <p><b>Honkai Starrail</b></p>
-            <img src="/hsr.jpg" alt="HSR">
+
+        <hr>
+
+        
+        <div class="game-list">
+            <a href="URL_INSTAGRAM" style="text-decoration: none; color: white;">
+                <div class="game-item">
+                    <p>Instagram</p>
+                    <img src="/ig_icon.jpg" alt="IG" style="height: 160px; border-color: #E1306C;">
+                </div>
+            </a>
+            <a href="URL_TIKTOK" style="text-decoration: none; color: white;">
+                <div class="game-item">
+                    <p>TikTok</p>
+                    <img src="/tiktok_icon.jpg" alt="TT" style="height: 160px; border-color: #00f2ea;">
+                </div>
+            </a>
         </div>
-        <div class="game-item">
-            <p><b>Zenless Zone Zero</b></p>
-            <img src="/zzz.jpg" alt="ZZZ">
-        </div>
-        <div class="game-item">
-            <p><b>Wuthering Waves</b></p>
-            <img src="/wuwa.jpg" alt="Wuwa">
-        </div>
-        <div class="game-item">
-            <p><b>Arknight Endfield</b></p>
-            <img src="/endf.jpg" alt="Endfield">
-        </div>
-        <div class="game-item">
-            <p><b>NTE</b></p>
-            <img src="/nte.jpg" alt="NTE">
-        </div>
+
+        <p class="quote">
+            "Kadang petualangan itu melelahkan... Sudah saatnya aku menjadi Orang Biasa dan Hidup Bahagia bersama Hu Tao di Liyue"
+        </p>
     </div>
-
-    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
-
-    <p style="text-align: center;"><b>Sosial Media Gua:</b><br>(Geser ke samping)</p>
-    <div class="game-list">
-        <a href="URL_INSTAGRAM_LU" style="text-decoration: none; color: white;">
-            <div class="game-item">
-                <p>Instagram</p>
-                <img src="/ig_icon.jpg" alt="Instagram" style="border-color: #E1306C;">
-            </div>
-        </a>
-
-        <a href="URL_TIKTOK_LU" style="text-decoration: none; color: white;">
-            <div class="game-item">
-                <p>TikTok</p>
-                <img src="/tiktok_icon.jpg" alt="TikTok" style="border-color: #00f2ea;">
-            </div>
-        </a>
-
-        <a href="URL_SOSMED_LAIN" style="text-decoration: none; color: white;">
-            <div class="game-item">
-                <p>Discord</p>
-                <img src="/discord_icon.jpg" alt="Discord" style="border-color: #5865F2;">
-            </div>
-        </a>
-    </div>
-
-    <p class="quote">
-        "Kadang petualangan itu melelahkan... Sudah saatnya aku menjadi Orang Biasa dan Hidup Bahagia bersama Hu Tao di Liyue"
-    </p>
-</div>
 </body>
 </html>
