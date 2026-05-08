@@ -82,6 +82,25 @@
             transform: scale(1.05);
             border-color: #ff4646;
         }
+        
+        /* CSS khusus untuk gambar profil full */
+.profile-container {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-full {
+    width: 100%;           /* Lebar penuhi kotak card */
+    max-width: 100%;       /* Pastikan gak melebihi container */
+    height: auto;          /* Tinggi otomatis biar gak gepeng */
+    aspect-ratio: 1604 / 720; /* Mengunci rasio sesuai resolusi lu */
+    object-fit: contain;   /* Menampilkan seluruh gambar tanpa kepotong */
+    border-radius: 10px;
+    border: 2px solid #ff4646;
+    display: block;
+}
+
 
         .quote {
             margin-top: 30px;
