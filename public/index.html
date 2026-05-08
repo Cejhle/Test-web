@@ -47,13 +47,14 @@
             -webkit-overflow-scrolling: touch;
         }
 
+        /* Sembunyikan scrollbar tapi tetep bisa di-scroll */
         .game-list::-webkit-scrollbar {
             display: none;
         }
 
         .game-item {
             flex: 0 0 auto;
-            width: 100%;
+            width: 160px; /* Lebar tiap item game */
             text-align: center;
             scroll-snap-align: start;
         }
@@ -69,7 +70,7 @@
 
         .game-item img {
             width: 100%;
-            height: 100%;
+            height: 230px;
             border-radius: 12px;
             object-fit: cover;
             border: 2px solid white;
