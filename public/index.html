@@ -18,12 +18,12 @@
 
         h1 {
             color: #ff4646;
-            font-size: 28px;
+            font-size: 26px;
             text-align: center;
         }
 
         .intro {
-            font-size: 18px;
+            font-size: 16px;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -32,91 +32,70 @@
             background: rgba(0, 0, 0, 0.75);
             padding: 20px;
             border-radius: 15px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* CSS KHUSUS PROFIL FULL 1604x720 */
-        .profile-container {
-            width: 100%;
-            margin: 15px 0;
-        }
-
-        .profile-full {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1604 / 720;
-            object-fit: cover; /* Biar tetap tajam dan penuhi area */
-            border-radius: 12px;
-            border: 2px solid #ff4646;
-            display: block;
-        }
-
-        /* CONTAINER SCROLL HORIZONTAL */
         .game-list {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             overflow-x: auto;
-            padding: 15px 5px;
+            padding: 10px 0;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
         }
 
         .game-list::-webkit-scrollbar {
-            height: 6px;
-        }
-        
-        .game-list::-webkit-scrollbar-thumb {
-            background: #ff4646;
-            border-radius: 10px;
+            display: none;
         }
 
         .game-item {
             flex: 0 0 auto;
-            width: 160px;
+            width: 300px;
             text-align: center;
             scroll-snap-align: start;
         }
 
         .game-item p {
             font-size: 14px;
-            margin-bottom: 8px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .game-item img {
             width: 100%;
-            height: 230px;
-            border-radius: 12px;
-            object-fit: cover;
-            border: 2px solid white;
+            height: auto;
+            aspect-ratio: 1604 / 720;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 2px solid #ff4646;
+            background: rgba(255,255,255,0.05);
             transition: transform 0.3s ease;
         }
 
         .game-item img:hover {
-            transform: scale(1.05);
-            border-color: #ff4646;
+            transform: scale(1.03);
+            border-color: white;
         }
 
         .quote {
             margin-top: 30px;
-            font-size: 15px;
+            font-size: 14px;
             font-style: italic;
             text-align: center;
-            color: #ddd;
+            color: #ccc;
             border-top: 1px solid rgba(255,255,255,0.2);
             padding-top: 15px;
         }
 
         b { color: #ff4646; }
         hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 25px 0; }
+        .sosmed-link { text-decoration: none; color: white; }
     </style>
 </head>
 <body>
+
     <h1>Selamat datang di dunia Cejhle! <b>IHIK</b></h1>
 
     <p class="intro">
@@ -125,21 +104,15 @@
     </p>
 
     <div class="card">
-        <p style="text-align: center;"><b>Profil Akun Gua:</b></p>
-        <div class="profile-container">
-            <img src="/profil_full.jpg" class="profile-full" alt="Profil">
-        </div>
-
-        <hr>
-
-        <p style="text-align: center;"><b>Game Gacha Gua (Geser):</b></p>
+        <p style="text-align: center;"><b>Daftar Game Gacha (Geser Samping):</b></p>
+        
         <div class="game-list">
             <div class="game-item">
-                <p>Genshin 1</p>
-                <img src="/genshin.jpg" alt="Genshin 1">
+                <p>Genshin Impact (Acc 1)</p>
+                <img src="/genshin.jpg" alt="Genshin">
             </div>
             <div class="game-item">
-                <p>Genshin 2</p>
+                <p>Genshin Impact (Acc 2)</p>
                 <img src="/genshin2.jpg" alt="Genshin 2">
             </div>
             <div class="game-item">
@@ -147,29 +120,38 @@
                 <img src="/hsr.jpg" alt="HSR">
             </div>
             <div class="game-item">
-                <p>ZZZ</p>
+                <p>Zenless Zone Zero</p>
                 <img src="/zzz.jpg" alt="ZZZ">
             </div>
             <div class="game-item">
-                <p>Wuwa</p>
+                <p>Wuthering Waves</p>
                 <img src="/wuwa.jpg" alt="Wuwa">
+            </div>
+            <div class="game-item">
+                <p>Arknight Endfield</p>
+                <img src="/endf.jpg" alt="Endfield">
+            </div>
+            <div class="game-item">
+                <p>Neverness to Everness</p>
+                <img src="/nte.jpg" alt="NTE">
             </div>
         </div>
 
         <hr>
 
+        <p style="text-align: center;"><b>Sosial Media Gua:</b></p>
         
         <div class="game-list">
-            <a href="URL_INSTAGRAM" style="text-decoration: none; color: white;">
-                <div class="game-item">
+            <a href="URL_INSTAGRAM_LU" class="sosmed-link">
+                <div class="game-item" style="width: 150px;">
                     <p>Instagram</p>
-                    <img src="/ig_icon.jpg" alt="IG" style="height: 160px; border-color: #E1306C;">
+                    <img src="/ig_icon.jpg" alt="IG" style="aspect-ratio: 1/1; border-color: #E1306C;">
                 </div>
             </a>
-            <a href="URL_TIKTOK" style="text-decoration: none; color: white;">
-                <div class="game-item">
+            <a href="URL_TIKTOK_LU" class="sosmed-link">
+                <div class="game-item" style="width: 150px;">
                     <p>TikTok</p>
-                    <img src="/tiktok_icon.jpg" alt="TT" style="height: 160px; border-color: #00f2ea;">
+                    <img src="/tiktok_icon.jpg" alt="TT" style="aspect-ratio: 1/1; border-color: #00f2ea;">
                 </div>
             </a>
         </div>
@@ -178,5 +160,6 @@
             "Kadang petualangan itu melelahkan... Sudah saatnya aku menjadi Orang Biasa dan Hidup Bahagia bersama Hu Tao di Liyue"
         </p>
     </div>
+
 </body>
 </html>
