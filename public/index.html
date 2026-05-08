@@ -27,32 +27,45 @@
             text-align: center;
             margin-bottom: 20px;
         }
+  
+        .deskripsi {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
+        /* BOX ABU-ABU TRANSPARAN DIGEDEIN DI SINI */
         .card {
             background: rgba(0, 0, 0, 0.75);
-            padding: 20px;
-            border-radius: 15px;
-            max-width: 900px;
+            padding: 30px;            /* Spasi dalam gua tambahin biar lega */
+            border-radius: 20px;
+            max-width: 1100px;        /* Ukuran box gua lebarin biar gambar 1604x720 mantap */
             margin: 0 auto;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .game-list {
             display: flex;
             gap: 20px;
             overflow-x: auto;
-            padding: 10px 0;
+            padding: 15px 0;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
         }
 
         .game-list::-webkit-scrollbar {
-            display: none;
+            height: 6px;
+        }
+        
+        .game-list::-webkit-scrollbar-thumb {
+            background: #ff4646;
+            border-radius: 10px;
         }
 
         .game-item {
             flex: 0 0 auto;
-            width: 300px;
+            width: 350px; /* Item game juga gua lebarin dikit */
             text-align: center;
             scroll-snap-align: start;
         }
@@ -68,29 +81,29 @@
             height: auto;
             aspect-ratio: 1604 / 720;
             object-fit: contain;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 2px solid #ff4646;
             background: rgba(255,255,255,0.05);
             transition: transform 0.3s ease;
         }
 
         .game-item img:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
             border-color: white;
         }
 
         .quote {
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 14px;
             font-style: italic;
             text-align: center;
             color: #ccc;
             border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 15px;
+            padding-top: 20px;
         }
 
         b { color: #ff4646; }
-        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 25px 0; }
+        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 30px 0; }
         .sosmed-link { text-decoration: none; color: white; }
     </style>
 </head>
@@ -102,9 +115,13 @@
         Halo Sayang. <br>
         Perkenalkan aku <b>Cejhle</b>, pendamping setia <b>Hu Tao</b>.
     </p>
+  
+        <p class="deskripsi">
+        Pekerjaanku Mendampingi Hu Tao saat lagi berpergian atau ada pekerjaan itu sendiri. Kadang kalo aku nganggur, Aku TS Komik tapi Jarang. Hobiku juga Bermain Game dan Gameku sangat banyak. Nanti kalo ada perlu bisa DM Discord yah...
+    </p>
 
     <div class="card">
-        <p style="text-align: center;"><b>Daftar Game Gacha (Geser Samping):</b></p>
+        <p style="text-align: center; font-size: 18px;"><b>Daftar Game Gacha (Geser Samping):</b></p>
         
         <div class="game-list">
             <div class="game-item">
@@ -139,17 +156,17 @@
 
         <hr>
 
-        <p style="text-align: center;"><b>Sosial Media Gua:</b></p>
+        <p style="text-align: center; font-size: 18px;"><b>Sosial Media Gua:</b></p>
         
         <div class="game-list">
             <a href="URL_INSTAGRAM_LU" class="sosmed-link">
-                <div class="game-item" style="width: 150px;">
+                <div class="game-item" style="width: 180px;">
                     <p>Instagram</p>
                     <img src="/ig_icon.jpg" alt="IG" style="aspect-ratio: 1/1; border-color: #E1306C;">
                 </div>
             </a>
             <a href="URL_TIKTOK_LU" class="sosmed-link">
-                <div class="game-item" style="width: 150px;">
+                <div class="game-item" style="width: 180px;">
                     <p>TikTok</p>
                     <img src="/tiktok_icon.jpg" alt="TT" style="aspect-ratio: 1/1; border-color: #00f2ea;">
                 </div>
