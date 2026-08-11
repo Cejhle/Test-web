@@ -18,35 +18,48 @@
         }
 
         body {
-            /* Background Hu Tao TANPA lapisan hitam pekat biar tetep terang & kelihatan jelas */
+            /* Background Hu Tao terang & utuh */
             background-image: url('/hutao.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            color: black;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Text shadow ditebalin biar teks tetep terbaca terang di atas background */
+            color: white;
             font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 30px 20px;
             min-height: 100vh;
         }
 
+        /* EFEK STROKE HITAM UNTUK TEKS DI LUAR BOX (HEADER) */
+        h1, .intro, .deskripsi {
+            -webkit-text-stroke: 1.5px #000000; /* Outine/Stroke Hitam */
+            text-shadow: 
+                2px 2px 0 #000,
+               -2px -2px 0 #000,
+                2px -2px 0 #000,
+               -2px 2px 0 #000,
+                0px 4px 10px rgba(0, 0, 0, 0.9); /* Drop shadow hitam tebal */
+        }
+
         h1 {
             color: #ff4646;
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 800;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
         }
 
         .intro {
-            font-size: 17px;
+            font-size: 18px;
+            font-weight: 700;
             text-align: center;
             margin-bottom: 12px;
             line-height: 1.5;
         }
 
         .deskripsi {
-            font-size: 15px;
+            font-size: 16px;
+            font-weight: 600;
             text-align: center;
             margin: 0 auto 25px auto;
             max-width: 800px;
@@ -54,14 +67,13 @@
         }
 
         /* BOX GLASSMORPHISM TRANSPARAN */
-        /* Tingkat transparansi dibuat pas (0.55 + blur 6px) biar background Hu Tao DI BELAKANG BOX tetep kelihatan */
         .card {
             background: rgba(10, 10, 12, 0.55);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
             padding: 35px;
             border-radius: 20px;
-            max-width: 1100px; /* Tetep lebar 1100px sesuai keinginan lu */
+            max-width: 1100px;
             margin: 0 auto;
             border: 1px solid rgba(255, 70, 70, 0.3);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
@@ -101,7 +113,7 @@
 
         .game-item {
             flex: 0 0 auto;
-            width: 350px; /* Ukuran lebar item tetep 350px seperti racikan awal lu */
+            width: 350px;
             text-align: center;
             scroll-snap-align: start;
         }
@@ -163,7 +175,7 @@
             padding-top: 20px;
         }
 
-        /* Penyesuaian khusus HP biar gak kesempitan */
+        /* Penyesuaian khusus HP */
         @media (max-width: 640px) {
             .card {
                 padding: 20px 12px;
@@ -173,6 +185,9 @@
             }
             .sosmed-card {
                 width: 140px;
+            }
+            h1, .intro, .deskripsi {
+                -webkit-text-stroke: 1px #000000; /* Menyesuaikan tebal stroke di layar kecil */
             }
         }
     </style>
